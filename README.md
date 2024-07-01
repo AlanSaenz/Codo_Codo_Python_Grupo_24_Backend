@@ -32,6 +32,13 @@ Importante:
 - En el archivo ".env" ubicado en la carpeta de "EntornoProyecto" se debe corroborar que los datos son los mismo que se utilizan en la base de datos como por ejemplo el puerto que se utiliza.
 - Es necesario e importante revisar que esten instaladas todas las dependencias en el entorno, se puede intalar utilizando el archivo "requirements.txt" dentro de la carpeta EntornoProyecto.
 
+# Ultima actualizacion con PythonAnyware.
+
+
+- Ya no es necesario la utilizacion de XAMPP ni la conexion local, ya que se implemento la utilizacion de PythonAnyware.
+- La direccion de a la base de datos es la siguiente: "https://asaenz.pythonanywhere.com"
+
+
 Integrantes:
 
 - Alan Saenz
