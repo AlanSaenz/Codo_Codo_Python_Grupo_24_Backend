@@ -4,10 +4,10 @@ import { categorias } from './datos-categoria.js';
 
 // Carousel de imagenes del Index
 const IMAGENES = [
-    'static/img/categoria1.jpg',
-    'static/img/categoria2.jpg',
-    'static/img/categoria3.jpg',
-    'static/img/categoria4.jpg'
+    '/Codo_Codo_Python_Grupo_24/static/img/categoria1.jpg',
+    '/Codo_Codo_Python_Grupo_24/static/img/categoria2.jpg',
+    '/Codo_Codo_Python_Grupo_24/static/img/categoria3.jpg',
+    '/Codo_Codo_Python_Grupo_24/static/img/categoria4.jpg'
 ];
 
 const DESCRIPCION = [
@@ -18,10 +18,10 @@ const DESCRIPCION = [
 ];
 
 const ENLACE = [
-    '/templates/categoria.html?clave=tradicional-china',
-    '/templates/categoria.html?clave=hamburguesas',
-    '/templates/categoria.html?clave=tradicional-argentina',
-    '/templates/categoria.html?clave=tradicional-china'
+    '/Codo_Codo_Python_Grupo_24/templates/categoria.html?clave=1',
+    '/Codo_Codo_Python_Grupo_24/templates/categoria.html?clave=2',
+    '/Codo_Codo_Python_Grupo_24/templates/categoria.html?clave=3',
+    '/Codo_Codo_Python_Grupo_24/templates/categoria.html?clave=1'
 ];
 
 let posicionActual = 0;

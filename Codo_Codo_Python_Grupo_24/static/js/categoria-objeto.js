@@ -10,7 +10,7 @@ export class Categoria {
 
     generar_Card_HTML_index() {
         const card = document.createElement('a');
-        card.href = `/templates/categoria.html?clave=${this.clave}`;
+        card.href = `/Codo_Codo_Python_Grupo_24/templates/categoria.html?clave=${this.clave}`;
         card.className = 'card-categoria';
         card.style.backgroundColor = this.colorFondo;
 

@@ -1,0 +1,136 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+#separador-main {
+    margin-top: 85px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+#titulo-descripcion {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#filtro-productos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#filtro-productos label {
+    margin-right: 10px;
+}
+
+#filtro{
+    padding: 10px 25px 10px 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+#form-producto {
+    max-width: 1200px;
+    margin: 0 auto 0 auto;
+    margin-bottom: 20px;
+}
+
+#producto-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-titulo{
+    padding-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#contenedor-botones{
+    display: flex;
+    margin-top: 10px;
+}
+
+.btn-verde {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-rojo {
+    background-color: #dc3545;
+    color: white;
+}
+
+#list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    width: 100%;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#titulo-lista{
+    background-image: linear-gradient(to right, #74D23A 10%, #A6D83C 40%, #FCE308 60%);
+}
+
+.table th{
+    padding: 10px;
+}
+
+.table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table td img {
+    max-width: 250px;
+}
+
+h3.subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form input, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#checkbox-formulario{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: 80%;
+}
