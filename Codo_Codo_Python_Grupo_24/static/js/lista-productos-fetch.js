@@ -1,4 +1,8 @@
-const BASEURL = 'http://127.0.0.1:5000';
+// Direccion utilizando XAMPP local
+// const BASEURL = 'http://127.0.0.1:5000';
+
+// Direccion usando PythonAnyware
+const BASEURL = 'https://asaenz.pythonanywhere.com';
 
 async function fetchData(url, method, data = null) {
   const options = {
