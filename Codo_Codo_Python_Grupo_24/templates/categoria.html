@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorias</title>
+    <link rel="stylesheet" href="/static/css/header-footer.css">
+    <link rel="stylesheet" href="/static/css/categoria-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/static/Img/fideos.ico.ico" type="img/x-icon">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header id="header">
+        <a class="logo" href="/index.html">
+            <img src="/static/img/Logo_1.png" alt="Logo">
+        </a>
+        <nav class="navegacion">
+            <ul>
+                <li><a href="/templates/categoria.html?clave=tradicional-china">Categorías</a></li>
+                <li><a href="/templates/formulario.html">Suscripción</a></li>
+                <li><a href="/templates/quienes-somos.html">¿Quiénes somos?</a></li>
+            </ul>
+        </nav>
+        <div class="barra-busqueda">
+            <i class="fa fa-search" aria-hidden="true"></i> <!-- ícono de FontAwesome -->
+            <input type="text" placeholder="Buscar tu alimento...">
+        </div>
+        <div id="espacio-celular"></div>
+        <div class="carrito">
+            <img src="/static/img/carrito-de-compras.png" alt="Carrito">
+        </div>
+        <input type="checkbox" id="toggle-menu">
+        <label for="toggle-menu" class="hamburguesa">&#9776;</label>
+        <nav class="menu-desplegable">
+            <ul>
+                <li><a href="/templates/categoria.html?clave=tradicional-china">Categorías</a></li>
+                <li><a href="/templates/formulario.html">Suscripción</a></li>
+                <li><a href="/templates/quienes-somos.html">¿Quiénes somos?</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-categoria">
+        <section id="categoria-seleccionada">
+            <h1 id="titulo-categoria">CATEGORIAS</h1>
+            <div id="lista-categorias">
+                <!-- Las CARD de categorias -->
+            </div>
+            <div id="detalle-categoria">
+                <img id="imagen-categoria" src="/static/img/carga.png" alt="Imagen de la categoría">
+                <div id="info-categoria">
+                    <img id="logo1-categoria" src="/static/img/Logo_2.png" alt="Logo">
+                    <p id="descripcion-categoria"></p>
+                    <img id="logo2-categoria" src="/static/img/Logo_2.png" alt="Logo">
+                </div>
+            </div>
+            <div id="productos-categoria">
+                <!-- Las CARD de productos -->
+            </div>
+        </section>
+
+        <div class="separador-contenido"></div>
+    </main>
+    
+    <!-- Pie -->
+    <footer id="footer">
+        <div class="contenido-footer">
+            <p>Dirección: Avenida 9 de Julio 1368, Bueno Aires, Argentina</p>
+            <p>Teléfono: +123456789</p>
+            <p>Correo electrónico: contactobambu@bambusabores.com</p>
+        </div>
+        <div class="contenido-footer">
+            <p>&copy; 2024 Bambu y Sabores. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="/static/js/categorias-script.js"></script>
+</body>
+</html>

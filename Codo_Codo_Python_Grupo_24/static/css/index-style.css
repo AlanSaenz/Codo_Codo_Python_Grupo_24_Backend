@@ -1,0 +1,679 @@
+:root {
+    --color-primario: #74D23A;
+    --color-primario-2: #A6D83C;
+    --color-secundario: #FCE308;
+    --categoria-fondo: #fffb00;
+    --desayuno-fondo: #FFF4E6;
+}
+
+/* Animacion de que carga la pagina */
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+body.loaded {
+    opacity: 1;
+}
+
+/* Contenido Principal de la pagina */
+#main-index {
+    width: 100%;
+}
+
+#separador-main{
+    margin-top: 65px;
+}
+
+/* Carrusel de imágenes */
+.carousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.boton-carousel {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+}
+
+#retroceder {
+    left: 10px;
+}
+
+#avanzar {
+    right: 10px;
+}
+
+.boton-carousel i {
+    font-size: 24px;
+}
+
+#contenedor-imagen {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color:white;
+}
+
+#imagen {
+    max-width: 100vw;
+    max-height: 100vw;
+    min-height: 100%;
+    object-fit: cover;
+    transition: opacity 0.7s ease-in-out;
+}
+
+#imagen.fade-out {
+    opacity: 0;
+}
+
+#imagen.fade-in {
+    opacity: 1;
+}
+
+.texto-imagen {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.boton-imagen{
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--color-primario);
+    color: black;
+    padding: 15px 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-imagen:hover {
+    background-color: var(--color-primario-2);
+}
+
+/* Categorias */
+
+#categorias {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 60px;
+    margin: 50px auto;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+#titulo-categorias {
+    font-size: 1.8em;
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.contenedor-card-categoria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-left: 40px;
+}
+
+.card-categoria {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    max-width: 240px;
+    min-width: 100px;
+    width: 240px;
+    height: 150px;
+    border-radius: 15px;
+    background-color: var(--categoria-fondo);
+    position: relative;
+    text-align: right;
+    padding: 10px;
+    box-shadow: 0 15px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.card-categoria:hover{
+    transform: scale(1.1);
+}
+
+.nombre-categorias {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.categoria-fondo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.imagen-categorias {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Sección de desayuno */
+
+#desayuno {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 60px;
+    margin: 50px auto;
+    text-align: left;
+    background-color: var(--desayuno-fondo); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+#titulo-desayuno {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#titulo-desayuno i {
+    margin-right: 10px;
+}
+
+#titulo-desayuno h2 {
+    font-size: 1.8em;
+}
+
+.contenedor-card-desayuno {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-desayuno {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--categoria-fondo);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.card-desayuno:hover{
+    transform: scale(1.1);
+}
+
+.imagen-fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.info-desayuno {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: left;
+}
+
+.info-desayuno p {
+    margin: 5px 0;
+}
+
+.nombre-desayuno {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.costo-desayuno, .duracion-desayuno {
+    font-size: 1em;
+    color: #555;
+}
+
+/* Sección de descuentos */
+
+#descuentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 60px;
+    margin: 50px auto;
+    text-align: left;
+    background-color: var(--color-secundario);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+#titulo-descuentos {
+    margin-left: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#titulo-descuentos i {
+    margin-right: 10px;
+}
+
+#titulo-descuentos h2 {
+    font-size: 1.8em;
+}
+
+.contenedor-card-descuentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card-descuento {
+    position: relative;
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: var(--categoria-fondo);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: 0.5s;
+}
+
+.card-descuento:hover{
+    transform: scale(1.1);
+}
+
+.imagen-fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.info-descuento {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    text-align: left;
+}
+
+.info-descuento p {
+    margin: 5px 0;
+}
+
+.nombre-descuento {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.descuento {
+    font-size: 1.2em;
+    color: #E53935;
+}
+
+.precio-original {
+    font-size: 1em;
+    color: #555;
+    text-decoration: line-through;
+}
+
+.contenedor-precio-descuento{
+    display: flex;
+    gap: 10px;
+}
+
+/* Sección de suscripcion / Premium */
+#suscripcion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: var(--color-primario);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 100%;
+    max-width: 1200px;
+}
+
+#imagen-suscripcion {
+    margin-right: 20px;
+}
+
+#imagen-suscripcion img {
+    max-width: 350px;
+    min-width: 250px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+#contenido-suscripcion{
+    color: black;
+}
+
+#titulo-suscripcion {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#titulo-suscripcion i {
+    margin-right: 10px;
+    color: var(--color-secundario);
+}
+
+.boton-suscripcion {
+    margin-top: 15px;
+    background-color: #FFD600;
+    color: black;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.4em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.boton-suscripcion:hover {
+    background-color: #FFEA00;
+    transform: scale(1.1);
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media screen and (max-width: 1200px) {
+    #categorias {
+        margin: 50px 50px;
+    }
+
+    #desayuno {
+        margin: 50px 50px;
+    }
+
+    .contenedor-card-desayuno {
+        gap: 40px;
+    }
+
+    .card-desayuno {
+        position: relative;
+        width: 250px;
+        height: 200px;
+    }
+
+    #descuentos {
+        margin: 50px 50px;
+    }
+
+    .contenedor-card-descuentos {
+        gap: 40px;
+    }
+
+    .card-descuento {
+        position: relative;
+        width: 250px;
+        height: 200px;
+    }
+
+    #suscripcion {
+        margin: 50px 50px;
+    }
+
+    #imagen-suscripcion img {
+        min-width: 200px;
+        margin-left: 10px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .boton-carousel {
+        padding: 10px 20px;
+        width: 40px;
+        height: 40px;
+    }
+
+    #contenedor-imagen {
+        width: 100%;
+        height: 450px;
+    }
+    
+    #imagen {
+        max-height: 450px;
+        object-fit: cover;
+    }
+    
+    .texto-imagen {
+        text-align: center;
+        padding: 5px 10px;
+        margin-bottom: 20px;
+        font-size: 1em;
+    }
+    
+    .boton-imagen{
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        font-size: 0.9em;
+    }
+
+    #categorias {
+        padding: 20px 20px;
+        margin: 0 10px;
+    }
+    
+    #titulo-categorias {
+        font-size: 1em;
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    
+    .contenedor-card-categoria {
+        gap: 30px;
+        margin-left: 0;
+    }
+    
+    .card-categoria {
+        min-width: 180px;
+        min-height: 100px;
+        width: 180px;
+        height: 100px;
+        padding: 10px;
+    }
+    
+    .nombre-categorias {
+        top: 10px;
+        left: 5px;
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+
+    #desayuno {
+        padding: 20px 20px;
+        margin: 0 10px;
+    }
+    
+    #titulo-desayuno {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    
+    #titulo-desayuno h2 {
+        font-size: 1em;
+    }
+    
+    .contenedor-card-desayuno {
+        gap: 30px;
+        margin-left: 0;
+    }
+    
+    .card-desayuno {
+        min-width: 180px;
+        min-height: 100px;
+        width: 180px;
+        height: 200px;
+    }
+    
+    .imagen-fondo img {
+        object-fit: cover;
+        opacity: 0.9;
+    }
+
+    .info-desayuno {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    
+    .nombre-desayuno {
+        font-size: 1.1em;
+    }
+    
+    .costo-desayuno, .duracion-desayuno {
+        font-size: 0.9em;
+    }
+
+    #descuentos {
+        padding: 20px 20px;
+        margin: 0 10px;
+    }
+    
+    #titulo-descuentos {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+    
+    #titulo-descuentos h2 {
+        font-size: 1em;
+    }
+    
+    .contenedor-card-descuentos {
+        gap: 30px;
+        margin-left: 0;
+    }
+    
+    .card-descuento {
+        min-width: 180px;
+        min-height: 100px;
+        width: 180px;
+        height: 200px;
+    }
+
+    .info-descuento {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    
+    .nombre-descuento {
+        font-size: 1.1em;
+    }
+    
+    .descuento {
+        font-size: 1.1em;
+    }
+    
+    .precio-original {
+        font-size: 0.9em;
+    }
+
+    #suscripcion {
+        padding: 40px 0px;
+        margin: 0 15px;
+        max-width: 100%;
+    }
+    
+    #imagen-suscripcion {
+        margin-right: 20px;
+    }
+    
+    #imagen-suscripcion img {
+        min-width: 100px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #contenido-suscripcion{
+        margin-right: 10px;
+    }
+    
+    #titulo-suscripcion {
+        font-size: 1.3em;
+        margin-bottom: 20px;
+    }
+    
+    #titulo-suscripcion i {
+        margin-right: 0;
+    }
+    
+    .boton-suscripcion {
+        margin-top: 10px;
+        padding: 15px 20px;
+        font-size: 1em;
+    }
+}

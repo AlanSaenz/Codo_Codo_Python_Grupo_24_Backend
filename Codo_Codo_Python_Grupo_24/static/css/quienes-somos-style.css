@@ -1,0 +1,78 @@
+:root {
+    --color-primario: #74D23A;
+    --color-primario-2: #A6D83C;
+    --color-secundario: #FCE308;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+/* Contenido Principal de la página */
+#main {
+    width: 100%;
+    padding-top: 80px;
+    line-height: 1.6;
+}
+
+/* Secciones de información */
+.info-section {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    max-width: 1200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.info-section h1 {
+    background-color: #74D23A;
+    color: white;
+    padding: 10px;
+    margin: 0 -20px 20px -20px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenido img {
+    max-width: 45%;
+    height: auto;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.contenido p {
+    flex: 1;
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+.contenido iframe {
+    max-width: 50%;
+    height: 350px;
+    max-height: 350px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .contenido img, .contenido iframe {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+}
