@@ -1,0 +1,124 @@
+-- Crear la tabla Categoria
+CREATE TABLE Categoria (
+    ID_categoria INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    color_Fondo VARCHAR(20) NOT NULL,
+    src_Imagen VARCHAR(255) NOT NULL,
+    descripcion TEXT NOT NULL,
+    img_Descripcion VARCHAR(255) NOT NULL,
+    clave VARCHAR(50) UNIQUE NOT NULL
+);
+
+-- Crear la tabla Producto
+CREATE TABLE Producto (
+    ID_producto INT AUTO_INCREMENT PRIMARY KEY,
+    ID_categoria INT NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    imagen VARCHAR(255) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    duracion INT NOT NULL,
+    FOREIGN KEY (ID_categoria) REFERENCES Categoria(ID_categoria) ON DELETE CASCADE
+);
+
+-- Categorias
+INSERT INTO Categoria (nombre, color_Fondo, src_Imagen, descripcion, img_Descripcion, clave) VALUES
+('Tradicional China', '#FF3434', '/Codo_Codo_Python_Grupo_24/static/img/Tradicional-china-sinbg.png', 'Disfruta de los auténticos sabores de la cocina tradicional china, como dumplings, Peking duck, y chow mein. Nuestra selección de platos está hecha con recetas tradicionales para brindarte una experiencia culinaria única.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/tradicional-china.jpg', 'tradicional-china'),
+('Hamburguesas', '#FFD700', '/Codo_Codo_Python_Grupo_24/static/img/hamburgesa-sinbg.png', 'Nuestras hamburguesas combinan lo mejor de ambos mundos, fusionando sabores orientales con ingredientes frescos y locales. Prueba nuestra hamburguesa de cerdo a la barbacoa con un toque especial.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/hamburguesas.jpg', 'hamburguesas'),
+('Tradicional Argentina', '#0084ff', '/Codo_Codo_Python_Grupo_24/static/img/Tradicional-argentina-sinbg.png', 'Deléitate con lo mejor de la gastronomía argentina, incluyendo empanadas, asado, y locro. Cada bocado te llevará a un viaje por los sabores ricos y variados de la cocina argentina.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/tradicional-argentina.jpg', 'tradicional-argentina'),
+('Bebidas', '#ff7300', '/Codo_Codo_Python_Grupo_24/static/img/Bebidas-sinbg.png', 'Explora nuestra variedad de bebidas, desde el clásico té de jazmín chino hasta el tradicional mate argentino. Perfecto para acompañar tus comidas o disfrutar en cualquier momento del día.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/bebidas.jpg', 'bebidas'),
+('Pollo y Pescado', '#a8dadc', '/Codo_Codo_Python_Grupo_24/static/img/Pollo-pescado-sinbg.png', 'Descubre nuestras opciones de pollo y pescado, preparados con técnicas auténticas y sabores exquisitos. Prueba el pollo Kung Pao y el pescado al vapor con jengibre para una experiencia deliciosa y saludable.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/pollo-pescado.jpg', 'pollo-pescado'),
+('Ensaladas y Verduras', '#65FF3F', '/Codo_Codo_Python_Grupo_24/static/img/Ensalada-sinbg.png', 'Refresca tu paladar con nuestras ensaladas y platos de verduras, como la ensalada de algas y el bok choy salteado. Perfecto para aquellos que buscan opciones más ligeras pero llenas de sabor.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/ensaladas-verduras.jpg', 'ensaladas-verduras'),
+('Postres', '#AC23FF', '/Codo_Codo_Python_Grupo_24/static/img/Postres-sinbg.png', 'Termina tu comida con un toque dulce con nuestros postres, como el tradicional pastel de luna, flan casero, y helado artesanal. La manera perfecta de cerrar tu experiencia gastronómica.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/postres.jpg', 'postres'),
+('Desayuno', '#FC44CA', '/Codo_Codo_Python_Grupo_24/static/img/Desayuno-sinbg.png', 'El desayuno es la comida más importante del día, y nuestra selección de desayunos te asegura comenzar la mañana con energía y satisfacción. Desde clásicos tradicionales hasta opciones más innovadoras, ofrecemos una variedad de platos que se adaptan a todos los gustos.', '/Codo_Codo_Python_Grupo_24/static/img/Categorias/desayunos.jpg', 'desayunos');
+
+-- tradicional-china = 1, hamburguesas = 2, tradicional-argentina = 3, bebidas = 4, pollo-pescado = 5, ensaladas-verduras = 6, postres = 7, desayunos = 8
+
+-- Insertar productos de la categoría 'Tradicional China'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(1, 'Dumplings de Cerdo', '/static/img/Productos/Dumplings-de-cerdo.jpg', 4500, 12),
+(1, 'Pato Pekinés', '/static/img/Productos/Pato-pekines.jpg', 12000, 30),
+(1, 'Chow Mein', '/static/img/Productos/Chow-mein.jpg', 7000, 20),
+(1, 'Cerdo Agridulce', '/static/img/Productos/Cerdo-Agridulce.jpg', 7500, 25),
+(1, 'Arroz Frito', '/static/img/Productos/Arroz-Frito.jpg', 5000, 15),
+(1, 'Tofu Mapo', '/static/img/Productos/Tofu-Mapo.jpg', 6000, 20),
+(1, 'Sopa de Wonton', '/static/img/Productos/Sopa-Wonton.jpg', 5500, 15);
+
+-- Insertar productos de la categoría 'Hamburguesas'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(2, 'Hamburguesa Clásica', '/static/img/Productos/Hamburgesa.jpg', 5000, 15),
+(2, 'Hamburguesa BBQ', '/static/img/Productos/Hamburgesa.jpg', 5500, 20),
+(2, 'Hamburguesa con Queso', '/static/img/Productos/Hamburgesa.jpg', 5200, 15),
+(2, 'Hamburguesa Doble', '/static/img/Productos/Hamburgesa.jpg', 6500, 20),
+(2, 'Hamburguesa Vegana', '/static/img/Productos/Hamburgesa.jpg', 6000, 18),
+(2, 'Hamburguesa de Pollo', '/static/img/Productos/Hamburgesa.jpg', 5500, 15),
+(2, 'Hamburguesa Picante', '/static/img/Productos/Hamburgesa.jpg', 5700, 17);
+
+-- Insertar productos de la categoría 'Tradicional Argentina'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(3, 'Empanadas', '/static/img/Productos/Empanadas.jpg', 600, 10),
+(3, 'Asado', '/static/img/Productos/Asado.jpg', 9000, 60),
+(3, 'Milanesa con Papas', '/static/img/Productos/Milanesa-Papas.jpg', 7000, 20),
+(3, 'Locro', '/static/img/Productos/Locro.jpg', 6500, 30),
+(3, 'Provoleta', '/static/img/Productos/Provoleta.jpg', 4000, 10),
+(3, 'Choripan', '/static/img/Productos/Choripan.jpg', 3000, 10),
+(3, 'Matambre a la Pizza', '/static/img/Productos/Matambre-Pizza.jpg', 8000, 25);
+
+-- Insertar productos de la categoría 'Bebidas'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(4, 'Té de Jazmín', '/static/img/Productos/Te-Jazmin.jpg', 2000, 5),
+(4, 'Mate', '/static/img/Productos/Mate.jpg', 1500, 5),
+(4, 'Cerveza Artesanal', '/static/img/Productos/Cerveza.jpg', 3000, 5),
+(4, 'Limonada', '/static/img/Productos/Limonada.jpg', 2500, 5),
+(4, 'Vino Malbec', '/static/img/Productos/Vino-Malbec.jpg', 4000, 5),
+(4, 'Café Espresso', '/static/img/Productos/Cafe-Espresso.jpg', 2000, 5),
+(4, 'Jugo de Naranja', '/static/img/Productos/Jugo-Naranja.jpg', 2500, 5);
+
+-- Insertar productos de la categoría 'Pollo y Pescado'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(5, 'Pollo Kung Pao', '/static/img/Productos/Pollo-Kung-Pao.jpg', 7000, 20),
+(5, 'Pescado al Vapor', '/static/img/Productos/Pescado-Vapor.jpg', 8500, 25),
+(5, 'Pollo Teriyaki', '/static/img/Productos/Pollo-Teriyaki.jpg', 7500, 20),
+(5, 'Salmón a la Parrilla', '/static/img/Productos/Salmon-Parrilla.jpg', 9000, 30),
+(5, 'Pollo al Curry', '/static/img/Productos/Pollo-Curry.jpg', 7000, 20),
+(5, 'Pescado Frito', '/static/img/Productos/Pescado-Frito.jpg', 7500, 20),
+(5, 'Pollo a la Parrilla', '/static/img/Productos/Pollo-Parrilla.jpg', 7500, 25);
+
+-- Insertar productos de la categoría 'Ensaladas y Verduras'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(6, 'Ensalada de Algas', '/static/img/Productos/Ensalada-Algas.jpg', 4000, 10),
+(6, 'Bok Choy Salteado', '/static/img/Productos/Bok-Choy-Salteado.jpg', 5000, 15),
+(6, 'Ensalada César', '/static/img/Productos/Ensalada-Cesar.jpg', 5000, 10),
+(6, 'Verduras Asadas', '/static/img/Productos/Verduras-Asadas.jpg', 5500, 15),
+(6, 'Ensalada Caprese', '/static/img/Productos/Ensalada-Caprese.jpg', 5000, 10),
+(6, 'Ensalada de Frutas', '/static/img/Productos/Ensalada-Frutas.jpg', 4000, 10),
+(6, 'Espinacas a la Crema', '/static/img/Productos/Espinacas-Crema.jpg', 6000, 15);
+
+-- Insertar productos de la categoría 'Postres'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(7, 'Pastel de Luna', '/static/img/Productos/Pastel-Luna.jpg', 3000, 15),
+(7, 'Flan Casero', '/static/img/Productos/Flan-Casero.jpg', 2500, 10),
+(7, 'Helado Artesanal', '/static/img/Productos/Helado-Artesanal.jpg', 3500, 10),
+(7, 'Tarta de Manzana', '/static/img/Productos/Tarta-Manzana.jpg', 4000, 15),
+(7, 'Churros con Dulce de Leche', '/static/img/Productos/Churros.jpg', 3000, 10),
+(7, 'Brownie con Helado', '/static/img/Productos/Brownie-Helado.jpg', 4500, 10),
+(7, 'Tiramisú', '/static/img/Productos/Tiramisu.jpg', 4000, 15);
+
+-- Insertar productos de la categoría 'Desayuno'
+INSERT INTO Producto (ID_categoria, nombre, imagen, precio, duracion) VALUES
+(8, 'Tostadas con Mermelada', '/static/img/Productos/Tostadas-Mermelada.jpg', 2000, 5),
+(8, 'Café con Leche', '/static/img/Productos/Cafe-Leche.jpg', 1500, 5),
+(8, 'Medialunas', '/static/img/Productos/Medialunas.jpg', 1800, 5),
+(8, 'Yogur con Granola', '/static/img/Productos/Yogur-Granola.jpg', 2500, 5),
+(8, 'Jugo de Naranja', '/static/img/Productos/Jugo-Naranja.jpg', 2500, 5),
+(8, 'Omelette', '/static/img/Productos/Omelette.jpg', 3000, 10),
+(8, 'Panqueques', '/static/img/Productos/Panqueques.jpg', 3500, 10);
+
+UPDATE producto
+	SET imagen = CONCAT('/Codo_Codo_Python_Grupo_24', imagen)
+    WHERE ID_producto > 0;
+
+select *
+from categoria;
+
+select *
+from producto;
