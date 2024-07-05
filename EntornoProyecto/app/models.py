@@ -65,6 +65,8 @@ class Categoria:
             'clave': self.clave
         }
 
+
+
 class Producto:
     def __init__(self, ID_producto=None, ID_categoria=None, nombre=None, imagen=None, precio=None, duracion=None):
         self.ID_producto = ID_producto
